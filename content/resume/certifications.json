@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "future-certification",
+      "type": "certification",
+      "title": "Add certifications here",
+      "organization": "Editable resume content",
+      "period": "Future",
+      "startDate": "",
+      "endDate": "",
+      "current": false,
+      "location": "",
+      "description": "This placeholder shows where future certifications, workshops, or awards can be added without changing component code.",
+      "highlights": ["Set visible to false or replace this entry when real certification data is ready."],
+      "tags": ["Editable"],
+      "visible": false,
+      "featured": false,
+      "sortOrder": 99
+    }
+  ]
+}

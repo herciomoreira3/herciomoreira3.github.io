@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: herciomoreira3/Portfolio
+  branch: main
+
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: resume
+    label: Resume
+    files:
+      - label: Experience
+        name: experience
+        file: content/resume/experience.json
+        format: json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Organization, name: organization, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Start Date, name: startDate, widget: string, required: false }
+              - { label: End Date, name: endDate, widget: string, required: false }
+              - { label: Current, name: current, widget: boolean, default: false }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Highlights, name: highlights, widget: list, required: false }
+              - { label: Visible, name: visible, widget: boolean, default: true }
+              - { label: Featured, name: featured, widget: boolean, default: false }
+      - label: Education
+        name: education
+        file: content/resume/education.json
+        format: json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Organization, name: organization, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Highlights, name: highlights, widget: list, required: false }
+              - { label: Visible, name: visible, widget: boolean, default: true }

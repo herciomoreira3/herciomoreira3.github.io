@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "untl-engineering",
+      "type": "education",
+      "title": "Bachelor's Degree of Engineering",
+      "organization": "National University of Timor-Leste (UNTL)",
+      "period": "2020 - 2026",
+      "startDate": "2020",
+      "endDate": "2026",
+      "current": true,
+      "location": "Timor-Leste",
+      "description": "Undergraduate Informatics Engineering student focused on information systems, IoT, mobile apps, and applied technical problem-solving.",
+      "highlights": [
+        "Built a Workshop Management Information System in semesters 4 and 5.",
+        "Developed a Public Complaint Information System and performed student-grade predictive analysis in semesters 6 and 7.",
+        "Designed an IoT-based water quality monitoring system for Nile tilapia ponds as a final-year capstone."
+      ],
+      "tags": ["Informatics", "IoT", "Information Systems"],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "eti-baucau",
+      "type": "education",
+      "title": "High School",
+      "organization": "ETI - Baucau",
+      "period": "2016 - 2018",
+      "startDate": "2016",
+      "endDate": "2018",
+      "current": false,
+      "location": "Baucau, Timor-Leste",
+      "description": "Completed high school education with a focus on informatics and technical studies.",
+      "highlights": [
+        "Built an online voting information system for student council president election.",
+        "Developed foundational skills in computer science, software development, and technical problem-solving."
+      ],
+      "tags": ["Informatics", "Software"],
+      "visible": true,
+      "featured": false,
+      "sortOrder": 2
+    }
+  ]
+}

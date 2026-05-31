@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "id": "soi-cbr-iot",
+      "type": "experience",
+      "title": "IT Support & IoT Project Contributor",
+      "organization": "SOI Asia - Community-Based Research IoT Project Team Timor-Leste",
+      "period": "2025 - Present",
+      "startDate": "2025",
+      "endDate": "",
+      "current": true,
+      "location": "Timor-Leste",
+      "description": "Contributor to an international IoT project focused on practical water-management solutions for Timor-Leste communities.",
+      "highlights": [
+        "Added Tetun and Portuguese language support to improve accessibility for local users.",
+        "Supported IoT device deployment, sensor configuration, and communication module setup.",
+        "Troubleshot real-time data communication, connectivity, and transmission issues.",
+        "Worked with mobile, cloud, and embedded components during prototype testing."
+      ],
+      "tags": ["IoT", "IT Support", "Mobile", "Localization"],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "ratalolo-secoms",
+      "type": "experience",
+      "title": "Producer & Editor",
+      "organization": "Ratalolo Team for Secretario Estado Comunicacao Social (SECOMS)",
+      "period": "2022 - 2023",
+      "startDate": "2022",
+      "endDate": "2023",
+      "current": false,
+      "location": "Timor-Leste",
+      "description": "Led documentary production and editing work with a focus on cultural storytelling and timely delivery.",
+      "highlights": [
+        "Coordinated project concepts, scripts, and shooting schedules.",
+        "Managed editing, sound mixing, color correction, and subtitles.",
+        "Improved video quality and narrative flow through post-production."
+      ],
+      "tags": ["Video Editing", "Production", "Storytelling"],
+      "visible": true,
+      "featured": false,
+      "sortOrder": 2
+    }
+  ]
+}
