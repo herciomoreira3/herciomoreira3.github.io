@@ -1,5 +1,34 @@
 [
   {
+    "id": 1255304264,
+    "name": "herciomoreira3.github.io",
+    "fullName": "herciomoreira3/herciomoreira3.github.io",
+    "description": "Personal developer portfolio built with React, TypeScript, Vite, GitHub Actions, and GitHub Pages.",
+    "htmlUrl": "https://github.com/herciomoreira3/herciomoreira3.github.io",
+    "homepageUrl": "https://herciomoreira3.github.io/",
+    "primaryLanguage": "TypeScript",
+    "topics": [
+      "github-actions",
+      "github-pages",
+      "portfolio",
+      "react",
+      "typescript",
+      "vite"
+    ],
+    "stars": 0,
+    "forks": 0,
+    "isFork": false,
+    "isArchived": false,
+    "defaultBranch": "main",
+    "createdAt": "2026-05-31T17:01:47Z",
+    "updatedAt": "2026-05-31T18:24:25Z",
+    "pushedAt": "2026-05-31T17:28:51Z",
+    "readmeSummary": "",
+    "matchedProjectId": "",
+    "visibility": "PUBLIC",
+    "lastSyncedAt": "2026-05-31T18:25:12.831Z"
+  },
+  {
     "id": 1250232148,
     "name": "Testora-Online-Exam-Mobile-Aplication",
     "fullName": "herciomoreira3/Testora-Online-Exam-Mobile-Aplication",
@@ -19,7 +48,7 @@
     "readmeSummary": "Kona-ba Projetu **Testora** mak aplikasaun mobile Flutter ba jere ezame online. Sistema ne'e dezenvolve atu ajuda administrador, mestre, no estudante atu halo prosesu ezame iha fatin ida. - Administrador bele jere uzuariu, materia, ezame ne'ebe mestre haruka, relatoriu, no alerta.",
     "matchedProjectId": "",
     "visibility": "PUBLIC",
-    "lastSyncedAt": "2026-05-31T17:19:47.719Z"
+    "lastSyncedAt": "2026-05-31T18:25:13.183Z"
   },
   {
     "id": 1250532453,
@@ -41,7 +70,7 @@
     "readmeSummary": "📖 Kona-Ba Aplikasaun Nee **SmartPond** maka aplikasaun móvel intelijente ne'ebé harii ho Flutter ho nia objetivu atu monitoriza kondisaun bee iha kolam peixe **tilapia nila (*Oreochromis niloticus*)** iha tempu real. Aplikasaun nee liga sensór IoT ho internet liu husi protokolu **MQTT** no armazena data sira iha **Fir",
     "matchedProjectId": "",
     "visibility": "PUBLIC",
-    "lastSyncedAt": "2026-05-31T17:19:48.326Z"
+    "lastSyncedAt": "2026-05-31T18:25:13.394Z"
   },
   {
     "id": 1250501711,
@@ -63,7 +92,7 @@
     "readmeSummary": "🏛️ SIMAUCATAR — Sistema Jestaun Funsionáriu Postu Administrativu Maucatar > **HRIS (Human Resource Information System)** ba jestaun funsionáriu iha Postu Administrativu Maucatar, Timor-Leste. > Dezenvolve uza **CodeIgniter 4** · **PHP 8.4** · **Bootstrap 5** · **MySQL**",
     "matchedProjectId": "",
     "visibility": "PUBLIC",
-    "lastSyncedAt": "2026-05-31T17:19:48.749Z"
+    "lastSyncedAt": "2026-05-31T18:25:13.583Z"
   },
   {
     "id": 1248780018,
@@ -85,6 +114,6 @@
     "readmeSummary": "SIPOLAI — Sistema Manajementu Dadus Populasaun (CI4) Sistem ne'e halo gestao ba dadus populasaun iha base iha CodeIgniter 4. Projetu ne'e bele trata familia, moris-an, karta, inventariu no relatoriu. 🌐 Demo Online",
     "matchedProjectId": "",
     "visibility": "PUBLIC",
-    "lastSyncedAt": "2026-05-31T17:19:49.361Z"
+    "lastSyncedAt": "2026-05-31T18:25:13.728Z"
   }
 ]

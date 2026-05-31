@@ -469,6 +469,38 @@ Repositories discovered:
 | `SmartPond-IoT-Monitoring-System` | SmartPond - IoT Monitoring System | Dart | Link to existing SmartPond case study; do not duplicate as a separate project |
 | `SIPOLAI-Sistema-Manajementu-Dadus-Populasaun-CI4` | SIPOLAI - Population Data Management System | PHP | New project card and case study candidate |
 | `SIMAUCATAR-HRIS-Human-Resource-Information-System-CI4` | SIMAUCATAR - HRIS for Maucatar Administrative Post | JavaScript / CI4 stack | New project card and case study candidate |
+| `herciomoreira3.github.io` | Hercio Portfolio - GitHub Pages | TypeScript | New project card for the portfolio website itself |
+
+#### GitHub Project: Portfolio Website
+
+Title:
+
+- Hercio Portfolio - GitHub Pages
+
+Short description:
+
+- Multilingual developer portfolio built with React, TypeScript, Vite, GitHub Actions, and GitHub Pages, with GitHub repository auto-sync and editable resume content.
+
+Category:
+
+- Developer Portfolio
+- Frontend
+- GitHub Pages
+- Automation
+
+Technical stack:
+
+- React
+- TypeScript
+- Vite
+- GitHub Pages
+- GitHub Actions
+- GitHub API
+
+Links:
+
+- GitHub: `https://github.com/herciomoreira3/herciomoreira3.github.io`
+- Live site: `https://herciomoreira3.github.io/`
 
 #### GitHub Project: Testora
 
@@ -801,7 +833,7 @@ Content:
 - Section title: "Projects"
 - Section subtitle: "Selected systems and field projects across IoT, mobile apps, IT support, and community software."
 - Show curated projects from the old portfolio plus auto-discovered GitHub repositories.
-- Current MVP should include the 5 old portfolio projects and the 3 new GitHub-only projects: Testora, SIPOLAI, and SIMAUCATAR.
+- Current MVP should include the 5 old portfolio projects and the 4 new GitHub-only projects: Portfolio Website, Testora, SIPOLAI, and SIMAUCATAR.
 - SmartPond GitHub repository must enrich the existing SmartPond case study instead of creating a duplicate card.
 
 Card requirements:
@@ -1271,7 +1303,7 @@ MVP is accepted when:
 4. Navigation scrolls to the correct sections.
 5. Visual style closely matches the reference: glass pill nav, light grid background, centered hero, soft glass cards, purple/blue accents.
 6. Projects section includes all 5 old portfolio projects.
-7. Projects section includes current public GitHub-only projects: Testora, SIPOLAI, and SIMAUCATAR.
+7. Projects section includes current public GitHub-only projects: Portfolio Website, Testora, SIPOLAI, and SIMAUCATAR.
 8. SmartPond GitHub repository is merged into the existing SmartPond case study instead of duplicated.
 9. Adding a new public GitHub repository can make it appear automatically through API sync/snapshot refresh without changing UI component code.
 10. Each curated project has a case-study level detail view or expandable detail content.

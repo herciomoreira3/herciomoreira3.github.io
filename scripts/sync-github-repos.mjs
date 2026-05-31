@@ -4,7 +4,7 @@ import { Buffer } from "node:buffer";
 const username = process.env.GITHUB_USERNAME || "herciomoreira3";
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const apiRoot = "https://api.github.com";
-const hiddenRepositoryNames = new Set(["Portfolio", `${username}.github.io`]);
+const hiddenRepositoryNames = new Set(["Portfolio"]);
 const headers = {
   Accept: "application/vnd.github+json",
   "User-Agent": "hercio-portfolio-sync",

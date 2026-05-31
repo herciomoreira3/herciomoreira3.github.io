@@ -5,6 +5,14 @@ import type { GithubRepoSnapshot, Project } from "../types";
 const repoSnapshot = githubRepos as GithubRepoSnapshot[];
 
 const repoOverrides: Record<string, Partial<GithubRepoSnapshot>> = {
+  "herciomoreira3.github.io": {
+    description:
+      "Personal developer portfolio built with React, TypeScript, Vite, GitHub Actions, and GitHub Pages.",
+    homepageUrl: "https://herciomoreira3.github.io/",
+    readmeSummary:
+      "A multilingual developer portfolio for Hercio Moreira Gusmao with GitHub repository auto-sync, editable resume content, live project links, and GitHub Pages deployment.",
+    topics: ["portfolio", "react", "typescript", "vite", "github-pages", "github-actions"],
+  },
   "SIPOLAI-Sistema-Manajementu-Dadus-Populasaun-CI4": {
     homepageUrl: "https://sipolai-sistema-manajementu-dadus.onrender.com/",
   },
@@ -18,6 +26,10 @@ function applyRepoOverrides(repo: GithubRepoSnapshot): GithubRepoSnapshot {
 }
 
 function titleFromRepoName(name: string) {
+  if (name === "herciomoreira3.github.io") {
+    return "Hercio Portfolio - GitHub Pages";
+  }
+
   const cleaned = name
     .replace(/-/g, " ")
     .replace(/\bCI4\b/i, "CodeIgniter 4")
@@ -33,6 +45,7 @@ function titleFromRepoName(name: string) {
 }
 
 function categoryFromLanguage(language: string) {
+  if (language === "TypeScript") return "Developer Portfolio";
   if (language === "Dart") return "Mobile App";
   if (language === "PHP") return "Web App";
   if (language === "JavaScript") return "Web System";
