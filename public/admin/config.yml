@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: herciomoreira3/Portfolio
+  repo: herciomoreira3/herciomoreira3.github.io
   branch: main
 
 publish_mode: editorial_workflow

@@ -4,6 +4,7 @@ import { Buffer } from "node:buffer";
 const username = process.env.GITHUB_USERNAME || "herciomoreira3";
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const apiRoot = "https://api.github.com";
+const hiddenRepositoryNames = new Set(["Portfolio", `${username}.github.io`]);
 const headers = {
   Accept: "application/vnd.github+json",
   "User-Agent": "hercio-portfolio-sync",
@@ -53,7 +54,7 @@ async function main() {
 
   for (const repo of filtered) {
     const topics = Array.isArray(repo.topics) ? repo.topics : [];
-    if (topics.includes("portfolio-hidden") || topics.includes("draft")) {
+    if (hiddenRepositoryNames.has(repo.name) || topics.includes("portfolio-hidden") || topics.includes("draft")) {
       continue;
     }
 
