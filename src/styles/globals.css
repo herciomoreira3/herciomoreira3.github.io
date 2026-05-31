@@ -68,6 +68,25 @@ button:focus-visible {
   padding: 104px 0;
 }
 
+@supports (content-visibility: auto) {
+  .project-card,
+  .timeline-card,
+  .tool-card,
+  .language-card,
+  .contact-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 320px;
+  }
+
+  .timeline-card {
+    contain-intrinsic-size: auto 230px;
+  }
+
+  .tool-card {
+    contain-intrinsic-size: auto 280px;
+  }
+}
+
 .site-nav {
   position: fixed;
   top: 0;
@@ -496,6 +515,7 @@ button:focus-visible {
   min-height: 320px;
   display: flex;
   flex-direction: column;
+  contain: layout paint style;
   overflow: hidden;
   padding: 24px;
   animation: rise-in 650ms ease both;
@@ -666,6 +686,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: 16px;
+  contain: layout paint style;
   overflow: hidden;
   padding: 22px;
   transition:
@@ -732,6 +753,7 @@ button:focus-visible {
   display: flex;
   min-height: 280px;
   flex-direction: column;
+  contain: layout paint style;
   gap: 14px;
   overflow: hidden;
   padding: 24px;
@@ -879,6 +901,7 @@ button:focus-visible {
 
 .contact-card {
   position: relative;
+  contain: layout paint style;
   overflow: hidden;
   padding: 44px;
   text-align: center;
@@ -1085,12 +1108,25 @@ button:focus-visible {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 82px;
+  }
+
+  body {
+    background: linear-gradient(180deg, #f8fafc, #eef5f7 44%, #fbfcff);
+  }
+
+  .bg-canvas {
+    display: none;
+  }
+
   .container {
     width: min(100% - 28px, var(--container));
   }
 
   .section-pad {
-    padding: 82px 0;
+    padding: 68px 0;
   }
 
   .site-nav {
@@ -1103,6 +1139,8 @@ button:focus-visible {
     width: 100%;
     gap: 0;
     padding: 7px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: none;
   }
 
   .nav-link {
@@ -1115,6 +1153,8 @@ button:focus-visible {
     top: 74px;
     right: 12px;
     padding: 5px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: none;
   }
 
   .language-option {
@@ -1125,7 +1165,9 @@ button:focus-visible {
   }
 
   .hero {
-    padding-top: 142px;
+    min-height: auto;
+    padding-top: 136px;
+    padding-bottom: 56px;
   }
 
   .hero h1 {
@@ -1137,6 +1179,33 @@ button:focus-visible {
   .verified-mark {
     width: 44px;
     height: 44px;
+    box-shadow: 0 8px 18px rgba(22, 136, 216, 0.18);
+  }
+
+  .avatar-orbit {
+    width: 94px;
+    height: 94px;
+    margin: 28px auto 34px;
+    box-shadow: 0 8px 20px rgba(56, 74, 110, 0.1);
+    will-change: auto;
+  }
+
+  .avatar-orbit::before {
+    animation: none;
+  }
+
+  .avatar-orbit::after {
+    inset: 8px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-width: 7px;
+  }
+
+  .type-caret {
+    animation: none;
   }
 
   .hero-ctas,
@@ -1150,6 +1219,8 @@ button:focus-visible {
 
   .hero-stats {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 30px;
   }
 
   .section-heading h2,
@@ -1162,10 +1233,102 @@ button:focus-visible {
   .tools-grid,
   .dialog-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .timeline-card {
     grid-template-columns: 1fr;
+  }
+
+  .stack-section {
+    padding-bottom: 54px;
+  }
+
+  .stack-scroll {
+    gap: 8px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .skill-chip {
+    min-height: 38px;
+    padding-inline: 12px;
+    font-size: 0.86rem;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .project-card,
+  .tool-card,
+  .timeline-card,
+  .language-card,
+  .contact-card,
+  .stat-item {
+    box-shadow: 0 1px 10px rgba(56, 74, 110, 0.06);
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .card,
+  .contact-card,
+  .project-dialog,
+  .status-pill,
+  .skill-chip,
+  .auto-badge,
+  .btn-glass,
+  .btn-ghost {
+    backdrop-filter: none;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 20px;
+    animation: none;
+  }
+
+  .project-card::before,
+  .timeline-card::before,
+  .contact-card::before,
+  .tool-card::before {
+    height: 2px;
+  }
+
+  .tool-card {
+    min-height: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .toolbox-section,
+  .projects-section,
+  .contact-card {
+    background: transparent;
+  }
+
+  .tool-card:hover,
+  .project-card:hover,
+  .timeline-card:hover,
+  .floating-contact:hover,
+  .btn:hover,
+  .text-button:hover,
+  .download-link:hover,
+  .tool-action:hover {
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal.visible {
+    animation: none;
   }
 
   .contact-card,

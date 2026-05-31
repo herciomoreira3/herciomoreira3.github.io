@@ -18,7 +18,8 @@ type HeroProps = {
 };
 
 export function Hero({ profile, t, statsLabels }: HeroProps) {
-  const typedRole = useTypewriter(t.roles);
+  const leanMotion = useLeanMotion();
+  const typedRole = useTypewriter(t.roles, leanMotion);
 
   return (
     <section id="home" className="hero section-pad">
@@ -72,7 +73,23 @@ export function Hero({ profile, t, statsLabels }: HeroProps) {
   );
 }
 
-function useTypewriter(words: string[]) {
+function useLeanMotion() {
+  const [leanMotion, setLeanMotion] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 720px), (prefers-reduced-motion: reduce)");
+    const update = () => setLeanMotion(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return leanMotion;
+}
+
+function useTypewriter(words: string[], leanMotion: boolean) {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -84,6 +101,15 @@ function useTypewriter(words: string[]) {
   }, [words]);
 
   useEffect(() => {
+    if (leanMotion) {
+      setText(words[wordIndex] ?? "");
+      const timeout = window.setTimeout(() => {
+        setWordIndex((current) => (current + 1) % Math.max(words.length, 1));
+      }, 2200);
+
+      return () => window.clearTimeout(timeout);
+    }
+
     const currentWord = words[wordIndex] ?? "";
     const isWordComplete = !isDeleting && text === currentWord;
     const isWordDeleted = isDeleting && text === "";
@@ -97,7 +123,7 @@ function useTypewriter(words: string[]) {
 
       if (isWordDeleted) {
         setIsDeleting(false);
-        setWordIndex((current) => (current + 1) % words.length);
+        setWordIndex((current) => (current + 1) % Math.max(words.length, 1));
         return;
       }
 
@@ -106,7 +132,7 @@ function useTypewriter(words: string[]) {
     }, delay);
 
     return () => window.clearTimeout(timeout);
-  }, [isDeleting, text, wordIndex, words]);
+  }, [isDeleting, leanMotion, text, wordIndex, words]);
 
   return text;
 }

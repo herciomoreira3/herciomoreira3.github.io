@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import { Contact } from "./components/Contact";
 import { Hero } from "./components/Hero";
@@ -24,6 +24,7 @@ function getInitialLanguage(): LanguageCode {
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const activeSectionRef = useRef<(typeof navIds)[number]>("home");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [language, setLanguage] = useState<LanguageCode>(getInitialLanguage);
   const t = translations[language];
@@ -57,26 +58,41 @@ export default function App() {
       }
 
       const pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8;
-      setActiveSection(pageBottom ? navIds[navIds.length - 1] : current);
+      const nextSection = pageBottom ? navIds[navIds.length - 1] : current;
+      if (activeSectionRef.current !== nextSection) {
+        activeSectionRef.current = nextSection;
+        setActiveSection(nextSection);
+      }
     };
 
     const onScroll = () => {
       window.cancelAnimationFrame(frame);
       window.clearTimeout(settleTimer);
-      updateActiveSection();
       frame = window.requestAnimationFrame(updateActiveSection);
-      settleTimer = window.setTimeout(updateActiveSection, 180);
+      settleTimer = window.setTimeout(updateActiveSection, 140);
+    };
+
+    const syncHashSection = () => {
+      const id = window.location.hash.slice(1);
+      const section = id ? document.getElementById(id) : null;
+      if (section) {
+        section.scrollIntoView({ block: "start", behavior: "auto" });
+      }
+      onScroll();
     };
 
     updateActiveSection();
+    settleTimer = window.setTimeout(window.location.hash ? syncHashSection : updateActiveSection, 250);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    window.addEventListener("hashchange", syncHashSection);
 
     return () => {
       window.cancelAnimationFrame(frame);
       window.clearTimeout(settleTimer);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      window.removeEventListener("hashchange", syncHashSection);
     };
   }, []);
 
