@@ -29,6 +29,15 @@ export default function App() {
   const [language, setLanguage] = useState<LanguageCode>(getInitialLanguage);
   const t = translations[language];
   const projects = useMemo(() => getPortfolioProjects(), []);
+  const heroProfile = useMemo(
+    () => ({
+      ...profile,
+      stats: profile.stats.map((stat, index) =>
+        index === 0 ? { ...stat, value: projects.length.toString() } : stat,
+      ),
+    }),
+    [projects.length],
+  );
   const navItems = useMemo(
     () => navIds.map((id) => ({ id, label: t.nav[id] })),
     [t.nav],
@@ -112,7 +121,7 @@ export default function App() {
         onLanguageChange={setLanguage}
       />
       <main>
-        <Hero profile={profile} t={t.hero} statsLabels={t.stats} />
+        <Hero profile={heroProfile} t={t.hero} statsLabels={t.stats} />
         <TechStack t={t.tech} />
         <Projects projects={projects} onSelectProject={setSelectedProject} t={t.projects} />
         <Resume t={t.resume} />

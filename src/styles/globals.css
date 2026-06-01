@@ -741,7 +741,7 @@ button:focus-visible {
 
 .tools-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr) minmax(260px, 0.9fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
 }
@@ -804,9 +804,20 @@ button:focus-visible {
   --tool-rgb: 21, 154, 120;
 }
 
+.game-tool {
+  --tool-accent: #d97706;
+  --tool-rgb: 217, 119, 6;
+}
+
+.pond-tool {
+  --tool-accent: #0f9fbe;
+  --tool-rgb: 15, 159, 190;
+}
+
 .pulse-tool {
   --tool-accent: #715df2;
   --tool-rgb: 113, 93, 242;
+  grid-column: span 2;
 }
 
 .tool-action {

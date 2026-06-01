@@ -16,6 +16,11 @@ const repoOverrides: Record<string, Partial<GithubRepoSnapshot>> = {
   "SIPOLAI-Sistema-Manajementu-Dadus-Populasaun-CI4": {
     homepageUrl: "https://sipolai-sistema-manajementu-dadus.onrender.com/",
   },
+  "Henrique-Rapido": {
+    description: "Typing speed game for training writing accuracy, focus, and WPM in the browser.",
+    homepageUrl: "https://herciomoreira3.github.io/Henrique-Rapido/",
+    topics: ["typing-game", "javascript", "html", "css", "github-pages"],
+  },
 };
 
 function applyRepoOverrides(repo: GithubRepoSnapshot): GithubRepoSnapshot {

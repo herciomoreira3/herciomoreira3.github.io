@@ -104,6 +104,9 @@ export const translations = {
       sipolaiTitle: "SIPOLAI Live Demo",
       sipolaiText:
         "Population data management system for Suku Laisorolai de Baixo, built with CodeIgniter 4 and hosted on Render.",
+      henriqueTitle: "Henrique Rapido Live Demo",
+      henriqueText:
+        "Browser typing game for training speed, accuracy, and focus with multilingual writing prompts.",
       openDemo: "Open Live Demo",
       testoraTitle: "Testora Android App",
       testoraText:
@@ -112,6 +115,10 @@ export const translations = {
       android32Hint: "Android 1.0 to 4.4",
       android64: "Android 64-bit",
       android64Hint: "Android 5.0 and newer",
+      smartpondTitle: "SmartPond Android App",
+      smartpondText:
+        "Download the SmartPond mobile release for IoT pond monitoring, sensor dashboards, and farmer alerts.",
+      downloadApk: "Download APK",
       repoTitle: "Repository Pulse",
       repoText: (count: number, date: string) => `${count} public repositories are indexed. Latest refresh: ${date}.`,
       notSynced: "Not synced yet",
@@ -232,6 +239,9 @@ export const translations = {
       sipolaiTitle: "Live Demo SIPOLAI",
       sipolaiText:
         "Sistem manajemen data populasi untuk Suku Laisorolai de Baixo, dibuat dengan CodeIgniter 4 dan dihosting di Render.",
+      henriqueTitle: "Live Demo Henrique Rapido",
+      henriqueText:
+        "Game typing di browser untuk melatih kecepatan, akurasi, dan fokus dengan prompt tulisan multi-bahasa.",
       openDemo: "Buka Live Demo",
       testoraTitle: "Aplikasi Android Testora",
       testoraText:
@@ -240,6 +250,10 @@ export const translations = {
       android32Hint: "Android 1.0 sampai 4.4",
       android64: "Android 64-bit",
       android64Hint: "Android 5.0 dan lebih baru",
+      smartpondTitle: "Aplikasi Android SmartPond",
+      smartpondText:
+        "Unduh rilis mobile SmartPond untuk monitoring kolam IoT, dashboard sensor, dan notifikasi petani.",
+      downloadApk: "Download APK",
       repoTitle: "Repository Pulse",
       repoText: (count: number, date: string) => `${count} repository public sudah terindeks. Refresh terakhir: ${date}.`,
       notSynced: "Belum tersinkron",
@@ -360,6 +374,9 @@ export const translations = {
       sipolaiTitle: "Live Demo SIPOLAI",
       sipolaiText:
         "Sistema manajementu dadus populasaun ba Suku Laisorolai de Baixo, harii ho CodeIgniter 4 no host iha Render.",
+      henriqueTitle: "Live Demo Henrique Rapido",
+      henriqueText:
+        "Jogu typing iha browser atu treina velocidade, akurasia, no foku ho prompt hakerek lian barak.",
       openDemo: "Loke Live Demo",
       testoraTitle: "Aplikasaun Android Testora",
       testoraText:
@@ -368,6 +385,10 @@ export const translations = {
       android32Hint: "Android 1.0 to'o 4.4",
       android64: "Android 64-bit",
       android64Hint: "Android 5.0 no foun liu",
+      smartpondTitle: "Aplikasaun Android SmartPond",
+      smartpondText:
+        "Download release mobile SmartPond ba monitorizasaun kolam IoT, dashboard sensor, no alerta ba produtor.",
+      downloadApk: "Download APK",
       repoTitle: "Repository Pulse",
       repoText: (count: number, date: string) => `${count} repository publiku indexadu ona. Refresh ikus: ${date}.`,
       notSynced: "Seidauk sync",
