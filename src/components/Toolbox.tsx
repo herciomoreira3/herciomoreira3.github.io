@@ -5,9 +5,9 @@ import { githubSyncInfo } from "../lib/github";
 const sipolaiDemoUrl = "https://sipolai-sistema-manajementu-dadus.onrender.com/";
 const henriqueDemoUrl = "https://herciomoreira3.github.io/Henrique-Rapido/";
 const testoraAndroid32Url =
-  "https://github.com/herciomoreira3/Testora-Online-Exam-Mobile-Aplication/releases/download/v1.0.0/app-armeabi-v7a-release.apk";
+  "https://github.com/herciomoreira3/Testora-Online-Exam-Mobile-Aplication/releases/download/v2.0.0/app-armeabi-v7a-release.apk";
 const testoraAndroid64Url =
-  "https://github.com/herciomoreira3/Testora-Online-Exam-Mobile-Aplication/releases/download/v1.0.0/app-arm64-v8a-release.apk";
+  "https://github.com/herciomoreira3/Testora-Online-Exam-Mobile-Aplication/releases/download/v2.0.0/app-arm64-v8a-release.apk";
 const smartpondAndroidUrl =
   "https://github.com/herciomoreira3/SmartPond-IoT-Monitoring-System/releases/download/v1.0.0/app-debug.apk";
 
